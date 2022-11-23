@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Contacto</title>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</head>
+
+<body>
+    
+    <!--*****************************BARRA DE NAVEGADOR*****************************************-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/Logoo.PNG" height="55px" weight = "100px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--*****************************CONTENIDO***********************************************-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row" style="margin-top:250px ;">
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col">
+                                <h5>Escribenos</h5>
+                                <p>Animate a escribirnos</p>
+                                <p>reparaciones@rentpairs.com</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col">
+                                <!--CAMBIAR-->
+                                <h5>Contactanos</h5>
+                                <p>Comunicate a tráves de tu teléfono o celular</p>
+                                <p>2209 2467 - 092 674 553</p>
+                                <img class="btn-whatsapp" src="https://clientes.dongee.com/whatsapp.png" width="64" height="64" alt="Whatsapp" onclick="window.location.href='https://wa.me/59892735631?text=Hola!%20Estoy%20interesado%20en%20tu%20servicio'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row" style="margin-top:150px ;">
+                <div class="row">
+                    <div class="col">
+                        <h5>No dudes en escribirnos</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <form method="post">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                                <input type="text" required class="form-control" id="Nombre"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Email</label>
+                                <input type="email" required class="form-control" id="mail">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Telefono</label>
+                                <input type="number" required class="form-control" id="Celular">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">¿Cómo podemos ayudarte?</label>
+                                <textarea class="form-control" required placeholder="Escribe aquí"
+                                    aria-label="With textarea"></textarea>
+                            </div>
+                            <button type="submit" id="btnEnviar" onclick="enviar()" class="btn">Enviar</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        function enviar(){
+            var nom=document.getElementById("Nombre").value;
+            var cel=document.getElementById("Celular").value;
+            var mail=document.getElementById("mail").value;
+        
+            alert("Gracias por comunicarte con nosotros " + nom+ ". Brevemente nos estaremos contactando a través de tu número de teléfono "+ cel+ " y también por el correo electrónico " + mail+ ". Muchas Gracias!" );
+            
+        }
+    </script>
+    
+</body>
+
+</html>
